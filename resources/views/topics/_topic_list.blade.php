@@ -37,7 +37,7 @@
         </div>
       </li>
 
-      @if ( ! $loop->last)
+      @if (!$loop->last)
         <hr>
       @endif
 
