@@ -18,14 +18,11 @@
           {{-- 回复删除按钮 --}}
           @can('destroy', $reply)
             <span class="meta float-right">
-              <form action="{{ route('replies.destroy', $reply->id) }}"
-                    onsubmit="return confirm('确定要删除此评论？');"
-                    method="post">
+              <form action="{{ route('replies.destroy', $reply->id) }}" onsubmit="return confirm('确定要删除此评论?');" method="post">
                 {{ csrf_field() }}
                 {{ method_field('DELETE') }}
                 <button type="submit" class="btn btn-default btn-xs pull-left text-secondary">
-                  <i class="far fa-trash-alt"></i>
-                </button>
+                <i class="far fa-trash-alt"></i> </button>
               </form>
             </span>
           @endcan
